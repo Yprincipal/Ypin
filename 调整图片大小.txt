@@ -1,0 +1,22 @@
+Sub 批量设置图片大小()
+'
+' Macro 宏
+'
+'
+Myheigth = 12
+Mywidth = 8
+On Error Resume Next '忽略错误
+For Each iShape In ActiveDocument.InlineShapes
+iShape.Height = 28.345 * Myheigth '设置图片高度为任意cm
+iShape.Width = 28.345 * Mywidth '设置图片宽度
+Next
+For Each Shape In ActiveDocument.Shapes
+Shape.Height = 28.345 * Myheigth '设置图片高度为任意cm
+Shape.Width = 28.345 * Mywidth '设置图片宽度
+Next
+End Sub
+
+作者：到处玩的
+链接：https://www.zhihu.com/question/23242989/answer/168158120
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
